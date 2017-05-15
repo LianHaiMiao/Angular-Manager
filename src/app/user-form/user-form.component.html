@@ -1,0 +1,74 @@
+<div [hidden]="submitted">
+    <div class="container">
+        <h1>新用户注册</h1>
+        <!-- 用户注册表单 -->
+        <form action="" (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group">
+                <label for="account">账号</label>
+                <input type="text" class="form-control" id="account" required [(ngModel)]="model.account" name="account" #account="ngModel" #spy>
+                <div [hidden]="account.valid || account.pristine" class="alert alert-danger">
+                    账号不能为空
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" placeholder="密码最少8位" required [(ngModel)]="model.password" name="password" #password="ngModel">
+                <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                    密码不能为空
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile">手机</label>
+                <input type="text" class="form-control" id="mobile" required [(ngModel)]="model.mobile" name="mobile" #mobile="ngModel">
+                <div [hidden]="mobile.valid || mobile.pristine" class="alert alert-danger">
+                    手机号不能为空
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="text" class="form-control" id="email" required [(ngModel)]="model.email" name="email" #email="ngModel">
+                <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                    邮箱不能为空
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sex">性别</label>
+                <select name="sex" id="sex" class="form-control" [(ngModel)]="model.sex" name="sex">
+              <option *ngFor="let sex of sexes" [value]="sex">{{ sex }}</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label for="province">省份</label>
+                <input type="text" class="form-control" id="province" [(ngModel)]="model.province" name="province">
+            </div>
+            <div class="form-group">
+                <label for="city">城市</label>
+                <input type="text" class="form-control" id="city" [(ngModel)]="model.city" name="city">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">提交</button>
+                <button type="submit" class="btn btn-primary" (click)="newUser(); userForm.reset()">重置</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div [hidden]="!submitted">
+    <div class="container">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+            <div class="col-xs-3">account</div>
+            <div class="col-xs-9  pull-left">{{ model.account }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">password</div>
+            <div class="col-xs-9 pull-left">{{ model.password }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">email</div>
+            <div class="col-xs-9 pull-left">{{ model.email }}</div>
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    </div>
+</div>

@@ -1,6 +1,16 @@
-# FormAngular
+# AngularJS4.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+# 更新记录
+
+## 2017.5.15第一个表单组件,用户注册
+
+##使用方式
+
+```
+git clone git@github.com:LianHaiMiao/AngularJS-.git
+npm install
+ng serve
+```
 
 ## Development server
 
