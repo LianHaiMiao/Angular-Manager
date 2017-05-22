@@ -1,0 +1,58 @@
+/*左侧导航栏头部部分 start*/
+
+.ava-thumb {
+    width: 90x;
+    height: 90px;
+    border-radius: 45px;
+}
+
+.font-weight {
+    font-weight: 600px;
+    font-size: 24px;
+}
+
+.site_title {
+    font-size: 25px;
+}
+
+.narbar_title {
+    margin-bottom: 15px;
+}
+
+.my_admin {
+    margin-left: 20px;
+}
+
+
+/*左侧导航栏头部部分 end*/
+
+
+/*左侧导航栏列表部分 start*/
+
+.sidebar_menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.siderbar_section {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.siderbar_section span {
+    margin-left: 140px;
+}
+
+
+/*左侧导航栏列表部分 end*/
+
+
+/*左侧导航栏底部 start*/
+
+.sidebar_footer {}
+
+
+/*左侧导航栏底部 end*/

@@ -6,11 +6,13 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { LeftNavComponent } from './left-nav/left-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserFormComponent,
+    LeftNavComponent,
   ],
   imports: [
     BrowserModule,
