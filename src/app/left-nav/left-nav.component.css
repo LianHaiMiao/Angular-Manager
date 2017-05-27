@@ -1,3 +1,29 @@
+/*
+左侧导航栏通用部分
+*/
+
+.leftNav {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.site_title {
+    color: #ecf0f1;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.leftNav-font {
+    color: #ecf0f1;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.leftNav-font:hover {
+    color: #3498db;
+}
+
+
 /*左侧导航栏头部部分 start*/
 
 .ava-thumb {
@@ -9,10 +35,6 @@
 .font-weight {
     font-weight: 600px;
     font-size: 20px;
-}
-
-.site_title {
-    font-size: 25px;
 }
 
 .narbar_title {
@@ -44,6 +66,23 @@
 
 .siderbar_section span {
     margin-left: 60px;
+}
+
+.list-a {
+    margin: 0;
+    padding: 0;
+}
+
+.list-a a {
+    background-color: #34495e;
+    border: 0;
+    color: #ecf0f1;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.list-a a:hover {
+    color: #3498db;
 }
 
 

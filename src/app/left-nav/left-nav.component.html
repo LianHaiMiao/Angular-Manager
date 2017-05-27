@@ -1,7 +1,7 @@
-<div class="col-md-2 col-xs-2" style="background-color:#34495e;height:100%;">
+<div class="col-md-2 col-xs-2 leftNav">
     <!--说明-->
     <div class="nav narbar_title">
-        <a href="index.html" class="site_title"><i class="fa fa-cog"></i><span class="my_admin">My-Admin</span></a>
+        <a href="/index" class="site_title"><i class="fa fa-cog"></i> <span class="my_admin">My-Admin</span></a>
     </div>
     <!--头像-->
     <div class="row narbar_title">
@@ -18,22 +18,55 @@
     <div class="sidebar_menu">
         <div class="siderbar_section">
             <!--文章管理折叠-->
-            <a><i class="fa fa-list"></i> 文章管理 <span class="fa fa-chevron-down"></span></a>
+            <a (click)="postChange()" class="leftNav-font"><i class="fa fa-list"></i> 文章管理 <span class="fa fa-chevron-down"></span></a>
+            <div [hidden]="post_collapse" class="list-group list-a">
+                <a href="#" class="list-group-item">新增文章</a>
+                <a href="#" class="list-group-item">删除文章</a>
+                <a href="#" class="list-group-item">查找文章</a>
+                <a href="#" class="list-group-item">修改文章</a>
+            </div>
         </div>
         <div class="siderbar_section">
-            <a> <i class="fa fa-list"></i> 评论管理 <span class="fa fa-chevron-down"></span> </a>
+            <a (click)="commentChange()" class="leftNav-font"><i class="fa fa-list"></i> 评论管理 <span class="fa fa-chevron-down"></span></a>
+            <div [hidden]="comment_collapse" class="list-group list-a">
+                <a href="#" class="list-group-item">新增评论</a>
+                <a href="#" class="list-group-item">删除评论</a>
+                <a href="#" class="list-group-item">查找评论</a>
+                <a href="#" class="list-group-item">修改评论</a>
+            </div>
         </div>
         <div class="siderbar_section">
-            <a> <i class="fa fa-list"></i> 用户管理 <span class="fa fa-chevron-down"></span> </a>
+            <a (click)="userChange()" class="leftNav-font"><i class="fa fa-list"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
+            <div [hidden]="user_collapse" class="list-group list-a">
+                <a href="#" class="list-group-item">新增用户</a>
+                <a href="#" class="list-group-item">删除用户</a>
+                <a href="#" class="list-group-item">查找用户</a>
+                <a href="#" class="list-group-item">修改用户</a>
+            </div>
         </div>
         <div class="siderbar_section">
-            <a> <i class="fa fa-list"></i> 角色管理 <span class="fa fa-chevron-down"></span> </a>
+            <a (click)="roleChange()" class="leftNav-font"><i class="fa fa-list"></i> 角色管理 <span class="fa fa-chevron-down"></span></a>
+            <div [hidden]="role_collapse" class="list-group list-a">
+                <a href="#" class="list-group-item">新增角色</a>
+                <a href="#" class="list-group-item">删除角色</a>
+                <a href="#" class="list-group-item">查找角色</a>
+                <a href="#" class="list-group-item">修改角色</a>
+            </div>
         </div>
         <div class="siderbar_section">
-            <a> <i class="fa fa-list"></i> 权限管理 <span class="fa fa-chevron-down"></span> </a>
+            <a (click)="authorChange()" class="leftNav-font"><i class="fa fa-list"></i> 权限管理 <span class="fa fa-chevron-down"></span></a>
+            <div [hidden]="author_collapse" class="list-group list-a">
+                <a href="#" class="list-group-item">新增权限</a>
+                <a href="#" class="list-group-item">删除权限</a>
+                <a href="#" class="list-group-item">查找权限</a>
+                <a href="#" class="list-group-item">修改权限</a>
+            </div>
         </div>
         <div class="siderbar_section">
-            <a> <i class="fa fa-list"></i> 数据统计 <span class="fa fa-chevron-down"></span> </a>
+            <a (click)="statChange()" class="leftNav-font"><i class="fa fa-list"></i> 数据统计 <span class="fa fa-chevron-down"></span></a>
+            <div [hidden]="stat_collapse" class="list-group list-a">
+                <a href="#" class="list-group-item">查看数据</a>
+            </div>
         </div>
     </div>
 
