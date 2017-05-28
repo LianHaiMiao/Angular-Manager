@@ -5,6 +5,9 @@
 .leftNav {
     background-color: #34495e;
     color: #ecf0f1;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
 }
 
 .site_title {
@@ -56,6 +59,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-left: 20px;
 }
 
 .siderbar_section {
@@ -91,7 +95,15 @@
 
 /*左侧导航栏底部 start*/
 
-.sidebar_footer {}
+
+/*.sidebar_footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}*/
 
 
 /*左侧导航栏底部 end*/

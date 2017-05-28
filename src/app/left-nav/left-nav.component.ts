@@ -1,50 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-left-nav',
-  templateUrl: './left-nav.component.html',
-  styleUrls: ['./left-nav.component.css']
+    selector: 'app-left-nav',
+    templateUrl: './left-nav.component.html',
+    styleUrls: ['./left-nav.component.css']
 })
 export class LeftNavComponent implements OnInit {
-  post_collapse: boolean;
-  comment_collapse: boolean;
-  user_collapse: boolean;
-  role_collapse: boolean;
-  author_collapse: boolean;
-  stat_collapse: boolean;
+    leftcollapse = {
+        post_collapse: true,
+        comment_collapse: true,
+        user_collapse: true,
+        role_collapse: true,
+        author_collapse: true,
+        stat_collapse: true,
+  };
 
-  constructor() { }
 
-  ngOnInit() {
-    this.post_collapse = true;
-    this.comment_collapse = true;
-    this.user_collapse = true;
-    this.role_collapse = true;
-    this.author_collapse = true;
-    this.stat_collapse = true;
-  }
+    constructor() {
+    }
 
-  postChange(): void {
-    this.post_collapse = !this.post_collapse;
-  }
+    ngOnInit() {
+        this.noOneShow();
+    }
 
-  commentChange(): void {
-    this.comment_collapse = !this.comment_collapse;
-  }
+    hiddenChange(coll: string): void {
+        this.noOneShow();
+        this.leftcollapse[coll] = !this.leftcollapse[coll];
+    }
 
-  userChange(): void {
-    this.user_collapse = !this.user_collapse;
-  }
+    // 全都不展示
+    noOneShow() {
+        this.leftcollapse.post_collapse = true;
+        this.leftcollapse.comment_collapse = true;
+        this.leftcollapse.user_collapse = true;
+        this.leftcollapse.role_collapse = true;
+        this.leftcollapse.author_collapse = true;
+        this.leftcollapse.stat_collapse = true;
+    }
 
-  roleChange(): void {
-    this.role_collapse = !this.role_collapse;
-  }
+    // 找到相同的string.
 
-  authorChange(): void {
-    this.author_collapse = !this.author_collapse;
-  }
-
-  statChange(): void {
-    this.stat_collapse = !this.stat_collapse;
-  }
 }
