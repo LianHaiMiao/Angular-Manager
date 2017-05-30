@@ -10,8 +10,8 @@ export class LeftNavComponent implements OnInit {
         post_collapse: true,
         comment_collapse: true,
         user_collapse: true,
-        role_collapse: true,
-        author_collapse: true,
+        order_collapse: true,
+        active_collapse: true,
         stat_collapse: true,
   };
 
@@ -39,8 +39,8 @@ export class LeftNavComponent implements OnInit {
         this.leftcollapse.post_collapse = true;
         this.leftcollapse.comment_collapse = true;
         this.leftcollapse.user_collapse = true;
-        this.leftcollapse.role_collapse = true;
-        this.leftcollapse.author_collapse = true;
+        this.leftcollapse.order_collapse = true;
+        this.leftcollapse.active_collapse = true;
         this.leftcollapse.stat_collapse = true;
     }
 

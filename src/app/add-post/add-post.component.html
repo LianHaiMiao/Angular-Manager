@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>添加新文章</h1>
+    <!-- 添加新文章表单 -->
+    <form action="" (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+            <label for="mobile">文章标题</label>
+            <input type="text" class="form-control" id="mobile" required [(ngModel)]="model.mobile" name="mobile" #mobile="ngModel">
+            <div [hidden]="mobile.valid || mobile.pristine" class="alert alert-danger">
+                文章标题不能为空
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">文章内容</label>
+            <input type="text" class="form-control" id="email" required [(ngModel)]="model.email" name="email" #email="ngModel">
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                文章内容不能为空
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">新增文章</button>
+            <button type="submit" class="btn btn-primary" (click)="newUser(); userForm.reset()">重置</button>
+        </div>
+    </form>
+</div>

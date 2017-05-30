@@ -21,50 +21,40 @@
                 <!--文章管理折叠-->
                 <a (click)="hiddenChange('post_collapse')" class="leftNav-font"><i class="fa fa-list"></i> 文章管理 <span class="fa fa-chevron-down"></span></a>
                 <div [hidden]="leftcollapse.post_collapse" class="list-group list-a">
-                    <a href="#" class="list-group-item">新增文章</a>
-                    <a href="#" class="list-group-item">删除文章</a>
-                    <a href="#" class="list-group-item">查找文章</a>
-                    <a href="#" class="list-group-item">修改文章</a>
+                    <a routerLink="/add/posts" class="list-group-item">新增文章</a>
+                    <a routerLink="/manager/posts" class="list-group-item">管理文章</a>
                 </div>
             </div>
             <div class="siderbar_section">
-                <a (click)="hiddenChange('comment_collapse')" class="leftNav-font"><i class="fa fa-list"></i> 评论管理 <span class="fa fa-chevron-down"></span></a>
+                <a (click)="hiddenChange('comment_collapse')" class="leftNav-font"><i class="fa fa-comments"></i> 评论管理 <span class="fa fa-chevron-down"></span></a>
                 <div [hidden]="leftcollapse.comment_collapse" class="list-group list-a">
                     <a href="#" class="list-group-item">新增评论</a>
-                    <a href="#" class="list-group-item">删除评论</a>
-                    <a href="#" class="list-group-item">查找评论</a>
-                    <a href="#" class="list-group-item">修改评论</a>
+                    <a href="#" class="list-group-item">管理评论</a>
                 </div>
             </div>
             <div class="siderbar_section">
-                <a (click)="hiddenChange('user_collapse')" class="leftNav-font"><i class="fa fa-list"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
+                <a (click)="hiddenChange('user_collapse')" class="leftNav-font"><i class="fa fa-user-circle"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
                 <div [hidden]="leftcollapse.user_collapse" class="list-group list-a">
                     <a href="#" class="list-group-item">新增用户</a>
-                    <a href="#" class="list-group-item">删除用户</a>
-                    <a href="#" class="list-group-item">查找用户</a>
-                    <a href="#" class="list-group-item">修改用户</a>
+                    <a href="#" class="list-group-item">管理用户</a>
                 </div>
             </div>
             <div class="siderbar_section">
-                <a (click)="hiddenChange('role_collapse')" class="leftNav-font"><i class="fa fa-list"></i> 角色管理 <span class="fa fa-chevron-down"></span></a>
-                <div [hidden]="leftcollapse.role_collapse" class="list-group list-a">
-                    <a href="#" class="list-group-item">新增角色</a>
-                    <a href="#" class="list-group-item">删除角色</a>
-                    <a href="#" class="list-group-item">查找角色</a>
-                    <a href="#" class="list-group-item">修改角色</a>
+                <a (click)="hiddenChange('order_collapse')" class="leftNav-font"><i class="fa fa-shopping-bag "></i> 订单管理 <span class="fa fa-chevron-down"></span></a>
+                <div [hidden]="leftcollapse.order_collapse" class="list-group list-a">
+                    <a href="#" class="list-group-item">新增订单</a>
+                    <a href="#" class="list-group-item">管理订单</a>
                 </div>
             </div>
             <div class="siderbar_section">
-                <a (click)="hiddenChange('author_collapse')" class="leftNav-font"><i class="fa fa-list"></i> 权限管理 <span class="fa fa-chevron-down"></span></a>
-                <div [hidden]="leftcollapse.author_collapse" class="list-group list-a">
-                    <a href="#" class="list-group-item">新增权限</a>
-                    <a href="#" class="list-group-item">删除权限</a>
-                    <a href="#" class="list-group-item">查找权限</a>
-                    <a href="#" class="list-group-item">修改权限</a>
+                <a (click)="hiddenChange('active_collapse')" class="leftNav-font"><i class="fa fa-archive"></i> 活动管理 <span class="fa fa-chevron-down"></span></a>
+                <div [hidden]="leftcollapse.active_collapse" class="list-group list-a">
+                    <a href="#" class="list-group-item">新增活动</a>
+                    <a href="#" class="list-group-item">管理活动</a>
                 </div>
             </div>
             <div class="siderbar_section">
-                <a (click)="hiddenChange('stat_collapse')" class="leftNav-font"><i class="fa fa-list"></i> 数据统计 <span class="fa fa-chevron-down"></span></a>
+                <a (click)="hiddenChange('stat_collapse')" class="leftNav-font"><i class="fa fa-pencil-square-o"></i> 数据统计 <span class="fa fa-chevron-down"></span></a>
                 <div [hidden]="leftcollapse.stat_collapse" class="list-group list-a">
                     <a href="#" class="list-group-item">查看数据</a>
                 </div>
