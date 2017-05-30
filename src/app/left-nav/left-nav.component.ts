@@ -24,8 +24,14 @@ export class LeftNavComponent implements OnInit {
     }
 
     hiddenChange(coll: string): void {
-        this.noOneShow();
-        this.leftcollapse[coll] = !this.leftcollapse[coll];
+        if (this.leftcollapse[coll]) {
+            this.noOneShow();
+            this.leftcollapse[coll] = !this.leftcollapse[coll];
+        }
+        else {
+            this.leftcollapse[coll] = !this.leftcollapse[coll];
+        }
+
     }
 
     // 全都不展示
