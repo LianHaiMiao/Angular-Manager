@@ -27,8 +27,7 @@ export class LeftNavComponent implements OnInit {
         if (this.leftcollapse[coll]) {
             this.noOneShow();
             this.leftcollapse[coll] = !this.leftcollapse[coll];
-        }
-        else {
+        }else {
             this.leftcollapse[coll] = !this.leftcollapse[coll];
         }
 
