@@ -9,7 +9,7 @@ body {
 }
 
 nav.sidebar-menu {
-    width: 20%;
+    width: 270px;
 }
 
 nav.sidebar {
@@ -25,7 +25,8 @@ nav.sidebar {
 .content {
     width: 80%;
     top: 0px;
-    left: 20%;
-    overflow: scroll;
-    margin: 0 0 0 21%;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0 0 0 300px;
 }

@@ -1,0 +1,16 @@
+.post-add {
+    width: 80%;
+    margin: 10 auto;
+}
+
+.ng-valid[required],
+.ng-valid.required,
+.ng-untouched[required] {
+    border-left: 5px solid #42A948;
+    /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+    /* red */
+}
