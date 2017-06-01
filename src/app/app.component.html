@@ -1,12 +1,12 @@
 <!--左边导航栏-->
 
-<div class="container-fluid">
-    <div class="row" id="wrap">
-        <div class="col-md-2 col-xs-2">
-            <app-left-nav></app-left-nav>
-        </div>
-        <div class="col-md-10 col-xs-10">
-            <router-outlet></router-outlet>
-        </div>
+
+<div class="row">
+    <nav class="sidebar sidebar-menu">
+        <app-left-nav></app-left-nav>
+    </nav>
+
+    <div class="content">
+        <router-outlet></router-outlet>
     </div>
 </div>

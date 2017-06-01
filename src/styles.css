@@ -4,9 +4,28 @@
     box-sizing: border-box;
 }
 
-.container-liquid {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+body {
+    background: none repeat scroll 0 0 white;
+}
+
+nav.sidebar-menu {
+    width: 20%;
+}
+
+nav.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: none repeat scroll 0 0 #0099ff;
+    color: white;
+    padding: 20px 10px;
+}
+
+.content {
+    width: 80%;
+    top: 0px;
+    left: 20%;
+    overflow: scroll;
+    margin: 0 0 0 21%;
 }
