@@ -10,6 +10,7 @@ import { AppRoutingModule } from './model/app-routing.module';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { ManagerPostComponent } from './manager-post/manager-post.component';
 
 
 
@@ -19,6 +20,7 @@ import { AddPostComponent } from './add-post/add-post.component';
     UserFormComponent,
     LeftNavComponent,
     AddPostComponent,
+    ManagerPostComponent,
   ],
   imports: [
     BrowserModule,
