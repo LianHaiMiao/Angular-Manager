@@ -26,4 +26,6 @@ export class AddPostComponent implements OnInit {
     restPost() {
       this.newPost = new Post('', '');
     }
+
+
 }

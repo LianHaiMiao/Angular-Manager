@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AlertModule } from 'ngx-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './model/app-routing.module';
@@ -26,7 +26,7 @@ import { ManagerPostComponent } from './manager-post/manager-post.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule.forRoot(),
+    NgbModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],
