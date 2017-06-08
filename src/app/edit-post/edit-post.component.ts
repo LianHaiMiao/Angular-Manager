@@ -7,16 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-post.component.css']
 })
 export class EditPostComponent implements OnInit {
-  content: any;
+  ckeditorContent: any;
+  submitted: boolean;
 
   constructor() {
-    this.content = '<p>Hello <strong>World !</strong></p>';
+    this.ckeditorContent = `<p>My HTML</p>`;
+    this.submitted = false;
   }
+
 
   ngOnInit() {
 
   }
 
+  changeThePage(content: any) {
+    console.log('触发changeThePage事件');
+    console.log(content);
+    this.submitted = !this.submitted;
+  }
 
 
 }
