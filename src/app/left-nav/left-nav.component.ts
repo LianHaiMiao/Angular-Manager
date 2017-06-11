@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LeftNavComponent implements OnInit {
     leftcollapse = {
         post_collapse: true,
-        comment_collapse: true,
+        todo_collapse: true,
         user_collapse: true,
         order_collapse: true,
         active_collapse: true,
@@ -36,7 +36,7 @@ export class LeftNavComponent implements OnInit {
     // 全都不展示
     noOneShow() {
         this.leftcollapse.post_collapse = true;
-        this.leftcollapse.comment_collapse = true;
+        this.leftcollapse.todo_collapse = true;
         this.leftcollapse.user_collapse = true;
         this.leftcollapse.order_collapse = true;
         this.leftcollapse.active_collapse = true;

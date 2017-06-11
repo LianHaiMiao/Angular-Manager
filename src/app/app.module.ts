@@ -16,6 +16,7 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { ManagerPostComponent } from './manager-post/manager-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { ManagerTodoComponent } from './manager-todo/manager-todo.component';
 
 
 
@@ -27,6 +28,7 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     AddPostComponent,
     ManagerPostComponent,
     EditPostComponent,
+    ManagerTodoComponent,
   ],
   imports: [
     BrowserModule,
