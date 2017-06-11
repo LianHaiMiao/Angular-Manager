@@ -27,7 +27,7 @@
         <div class="siderbar_section">
             <a (click)="hiddenChange('todo_collapse')" class="font_white dash_font_size"><i class="fa fa-comments"></i> <span>任务管理</span> <i class="fa fa-chevron-down"></i></a>
             <div [hidden]="leftcollapse.todo_collapse" class="list-group list-a">
-                <a href="#" class="list-group-item">任务列表</a>
+                <a routerLink="/manager/todos" class="list-group-item">任务列表</a>
             </div>
         </div>
         <div class="siderbar_section">

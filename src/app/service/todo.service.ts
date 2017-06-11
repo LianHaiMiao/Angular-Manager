@@ -10,7 +10,10 @@ export class TodoService {
     // 保存任务列表
     todos: Todo[] = [];
 
-    constructor() { }
+    constructor() {
+        this.todos.push(new Todo(1, '明天早上要吃早饭哦～'));
+        this.todos.push(new Todo(2, '今天晚上要吃跳舞哈～'));
+    }
 
     // 添加一个新任务
     addTodo(todo: Todo): TodoService {
@@ -25,8 +28,8 @@ export class TodoService {
     }
 
     // 查看现在所有的任务
-    lookTodo(): TodoService {
-        return this;
+    getTodos(): Todo[] {
+        return this.todos;
     }
 
 }
