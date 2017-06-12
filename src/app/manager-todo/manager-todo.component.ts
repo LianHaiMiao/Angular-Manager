@@ -17,4 +17,24 @@ export class ManagerTodoComponent implements OnInit {
     this.todos = this.todoservice.getTodos();
   }
 
+  // 新增任务
+  onEnter(newtodo: string): void {
+    this.todoservice.addTodo(new Todo(this.todoservice.currentId, newtodo));
+    this.freshTodoList();
+  }
+
+  // 刷新任务列表,只有未完成的任务可以显示
+  freshTodoList(): Todo[] {
+    let futureTodo: Todo[];
+    for (let todo of this.todoservice.todos) {
+      if (!todo.complete) {
+        futureTodo.push(todo);
+      }
+    }
+    return futureTodo;
+  }
+
+  // 完成任务
+
+
 }
