@@ -38,8 +38,9 @@ export class TodoService {
     }
 
     // 完成一个任务
-    complete(id: number[]): Todo[] {
-        return this.todos;
+    complete(checkedId: number): TodoService {
+        this.todos = this.todos.filter(todo => todo.id !== checkedId);
+        return this;
     }
 
 }
