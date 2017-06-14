@@ -37,4 +37,9 @@ export class TodoService {
         return this.todos;
     }
 
+    // 完成一个任务
+    complete(id: number[]): Todo[] {
+        return this.todos;
+    }
+
 }

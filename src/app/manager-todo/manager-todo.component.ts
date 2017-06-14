@@ -11,6 +11,8 @@ import { Todo } from '../model/todo.model';
 export class ManagerTodoComponent implements OnInit {
   todos: Todo[];
 
+  // checkbox选中的ID们
+  checkboxId: number[];
   constructor(private todoservice: TodoService) { }
 
   ngOnInit() {
@@ -20,21 +22,19 @@ export class ManagerTodoComponent implements OnInit {
   // 新增任务
   onEnter(newtodo: string): void {
     this.todoservice.addTodo(new Todo(this.todoservice.currentId, newtodo));
-    this.freshTodoList();
-  }
-
-  // 刷新任务列表,只有未完成的任务可以显示
-  freshTodoList(): Todo[] {
-    let futureTodo: Todo[];
-    for (let todo of this.todoservice.todos) {
-      if (!todo.complete) {
-        futureTodo.push(todo);
-      }
-    }
-    return futureTodo;
   }
 
   // 完成任务
+  deal(id: number[]): void {
+    this.todoservice.complete(id);
+  }
+
+  // 监控每一个复选框，被选中了就将它的complete设置为true
+  changeStatus(id: any): void {
+    console.log('咳咳');
+    console.log(id);
+    this.checkboxId.push(id);
+  }
 
 
 }

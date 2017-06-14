@@ -10,7 +10,7 @@
         <!--任务列表-->
         <section [hidden]="!todos.length" class="todo-section">
             <div class="todo-group" *ngFor="let todoItem of todos">
-                <input type="checkbox" class="todo-input" name="target">
+                <input type="checkbox" class="todo-input">
                 <div class="todo-label">{{todoItem.title}}</div>
             </div>
         </section>
