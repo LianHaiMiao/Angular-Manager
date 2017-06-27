@@ -1,0 +1,85 @@
+<div class="container">
+  <h1>用户注册(尝试使用FormGroup)</h1>
+
+  <form action="" [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <div class="form-group">
+      <label for="account" class="center-block">账号</label>
+      <input type="text" class="form-control" formControlName="account">
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="center-block">密码</label>
+      <input type="text" class="form-control" formControlName="password">
+    </div>
+
+
+    <div class="form-group">
+      <label for="mobile" class="center-block">手机</label>
+      <input type="text" class="form-control" formControlName="mobile">
+    </div>
+
+
+    <div class="form-group">
+      <label for="email" class="center-block">邮箱</label>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="sex" class="center-block">性别</label>
+      <select class="form-control" formControlName="sex">
+        <option *ngFor="let sex of sexes" [value]="sex">{{sex}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="birthday" class="center-block">生日</label>
+        <div class="input-group">
+          <input class="form-control" placeholder="xxxx-xx-xx" formControlName="birthday" ngbDatepicker #d="ngbDatepicker">
+          <div class="input-group-addon" (click)="d.toggle()" >
+            <i class="fa fa-calendar-o" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
+          </div>
+      </div>
+    </div>   
+
+    <div class="form-group">
+      <label for="province" class="center-block">省份</label>
+      <input type="text" class="form-control" formControlName="province">
+    </div>
+
+    <div class="form-group">
+      <label for="city" class="center-block">城市</label>
+      <input type="text" class="form-control" formControlName="city">
+    </div>
+
+ 
+    <div class="form-group">
+      <button class="btn btn-success" [disabled]="userForm.status=='INVALID'" type="submit">提交</button>
+      <button class="btn btn-primary" (click)="addLair()" type="reset">重置</button>
+    </div>
+  </form>
+
+
+
+  <p>Form value: {{ userForm.value | json }}</p>
+  <p>Form status: {{ userForm.status | json }}</p>
+  <p>Name value: {{ userForm.get('account').value}}</p>
+</div>
+<!--<div [hidden]="!submitted">
+    <div class="container">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+            <div class="col-xs-3">account</div>
+            <div class="col-xs-9  pull-left">{{ model.account }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">password</div>
+            <div class="col-xs-9 pull-left">{{ model.password }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">email</div>
+            <div class="col-xs-9 pull-left">{{ model.email }}</div>
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    </div>
+</div>-->
