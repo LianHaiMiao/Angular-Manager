@@ -1,10 +1,37 @@
-<!--左边导航栏-->
-<div class="row">
-    <nav class="sidebar sidebar-menu">
-        <app-left-nav></app-left-nav>
-    </nav>
-
+<!-- 左侧菜单栏 -->
+<div class="menu-bur">
     <div class="content">
+        <h5 class="menu-header"><i class="fa fa-diamond"></i>{{title}}</h5>
+        <div class="line"></div>
+        <!-- 中间菜单部分 -->
+        <nav class="menu-nav">
+            <div class="nav-title panel-heading">
+                <span class="nav-font"> Navigation </span> <i class="fa fa-signal"></i>
+            </div>
+            <!-- 无折叠 -->
+            <div class="menu-block">
+                <div routerLink="/dashboard">
+                    <i class="fa fa-tv"></i> <span>Dashboard</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- 右侧内容 -->
+<div class="manager-content">
+    <!-- 右侧顶部 -->
+    <div class="top-menu">
+        <div class="left-tool-button">
+            <div class="circle-button text-center">
+                <i class="fa fa-navicon" (click)="isMenuSmall=!isMenuSmall"></i>
+            </div>
+        </div>
+    </div>
+    <!-- 右侧底部内容 -->    
+    <div class="view-pad">
         <router-outlet></router-outlet>
     </div>
 </div>
+
+

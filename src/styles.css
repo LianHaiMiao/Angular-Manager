@@ -2,36 +2,41 @@
 
 * {
     box-sizing: border-box;
+    font-family: GoogleFont;
 }
 
-body {
-    background: none repeat scroll 0 0 white;
+
+
+.rounded-0 {
+    border-radius: 0;
 }
 
-nav.sidebar-menu {
-    width: 270px;
+.border-0 {
+    border: 0 !important;
 }
 
-nav.sidebar {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    background: none repeat scroll 0 0 #0099ff;
-    color: white;
-    padding: 20px 10px;
+.bg {
+    background-color: hsla(0,0%,43%,.6);
+    color: #fff;
 }
 
-.content {
-    width: 80%;
-    top: 0px;
-    left: 0px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    margin: 0 0 0 300px;
-}
-
-.post_panel {
+.line {
+    height: 1px;
+    background-color: hsla(0,0%,100%,.2);
     width: 90%;
-    margin: 10 auto;
+    margin: auto;
 }
+
+
+.nav-font {
+    font-weight: 400;
+    padding-left: 25px;
+    font-style: normal;
+    position: relative;
+}
+
+
+
+
+
+

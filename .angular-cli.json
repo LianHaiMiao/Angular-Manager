@@ -20,7 +20,7 @@
         "styles": [
             "../node_modules/_bootstrap@4.0.0-alpha.6@bootstrap/dist/css/bootstrap.min.css",
             "../node_modules/_font-awesome@4.7.0@font-awesome/css/font-awesome.min.css",
-            "node_modules/ngx-toastr/toastr.css",
+            "../node_modules/ngx-toastr/toastr.css",
             "styles.css"
         ],
         "scripts": [],
